@@ -1,0 +1,37 @@
+
+----Parte A ---------
+
+//1° Terminale
+
+cd Scrivania/Ciber/Elaborato_2.1/Ros_pA/Status/build/bin
+./ReceiveServer 12000
+
+//2°Terminale
+
+cd Scrivania/Ciber/Elaborato_2.1/Ros_pA/Status/build/bin
+./StatusClient localhost 12000
+
+
+
+----Parte B ---------
+
+//1° Terminale 
+
+cd Scrivania/Ciber/Elaborato_2.1/Ros_pB/catkin_ws1/catkin_ws1
+source ./devel/setup.bash
+
+
+//2°Terminale
+source /opt/ros/melodic/setup.bash
+roscore
+
+//3°Terminale
+source /opt/ros/melodic/setup.bash
+rosrun turtlesim turtlesim_node 
+
+//1° Terminale 
+cd src
+rosrun primo_pachetto_ros pub_turtle.py
+
+
+
